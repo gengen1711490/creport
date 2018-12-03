@@ -1,3 +1,11 @@
+レポートの上げ方
+s1711490@7C102-P044:~/creport$ git add .
+s1711490@7C102-P044:~/creport$ git commit -m "aa"
+s1711490@7C102-P044:~/creport$ git push
+
+
+
+
 s1711490@7C103-P097:~$ ls
 20170407.flg  Pictures	     ip		 soft2	       ドキュメント
 AppData       Saved Games    old1.mozc	 stat_work     ビデオ
@@ -111,4 +119,5 @@ prob4.c:8:1: error: expected ‘;’ before ‘}’ token
  ^
 s1711490@7C103-P097:~/creport$ gcc -o prob4 prob4.c
 s1711490@7C103-P097:~/creport$ ./prob4
-hello!!!hello!!!hello!!!hello!!!hello!!!hello!!!hello!!!hello!!!hello!!!hello!!!s1711490@7C103-P097:~/creport$
+hello!!!hello!!!hello!!!hello!!!hello!!!hello!!!hello!!!hello!!!hello!!!hello!!!
+s1711490@7C103-P097:~/creport$

@@ -2,13 +2,12 @@
 
 double power(double a, int b){
   int i = 1;
-  while(i*i <= b){
-    if(a % i == 0){
-       return i;
-    }
+  double k = 1.0;
+  while(i <= b){
+    k *= a;
     i++;
   }
-  return 0;
+  return k;
 }
 
 
