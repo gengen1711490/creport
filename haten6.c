@@ -8,7 +8,7 @@ void myscanf(char* str){
       break;
     }
     char c = *str;
-    c = getc(stdin)
+    c = getc(stdin);
     str++;
   }
 }
@@ -27,10 +27,12 @@ int main(){
   char* p = str;
   printf("文字列を入力して下さい。\n");
   scanf("%s",str);
-  printf("順に出力します。\n");
+  printf("出力します。\n");
   int k = 1;
   while (k <= strLength(str)) {
     printf("%c",*p);
     p++;
     k++;
   }
+  printf("\n");
+}
