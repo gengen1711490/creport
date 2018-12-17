@@ -2,48 +2,50 @@
 #include <stdlib.h>
 
 typedef struct node {
-  char creature[20];
+  char* creature;
   struct node* next1;
   struct node* next2;
 } node;
 
 int main(){
   node *a, *b, *aa, *ab, *ba, *bb, *head;
-  FILE *fp;
-  fp = fopen("haten9_txt.txt","r");
 
   head = (node*)malloc(sizeof(node));
-  fscanf(fp,"%s", head->creature);
+  (*head).creature = "生物";
 
   head->next1 = (node*)malloc(sizeof(node));
   a = head->next1;
-  fscanf(fp,"%s", a->creature);
+  (*a).creature = "哺乳類";
 
   head->next2 = (node*)malloc(sizeof(node));
   b = head->next2;
-  fscanf(fp,"%s", b->creature);
+  (*b).creature = "魚類";
 
   a->next1 = (node*)malloc(sizeof(node));
   aa = a->next1;
-  fscanf(fp,"%s", aa->creature);
+  (*aa).creature = "犬";
   a->next2 = (node*)malloc(sizeof(node));
   ab = a->next2;
-  fscanf(fp,"%s", ab->creature);
+  (*ab).creature = "猫";
 
   b->next1 = (node*)malloc(sizeof(node));
-  ba = head->next1;
-  fscanf(fp,"%s", ba->creature);
+  ba = b->next1;
+  (*ba).creature = "マグロ";
   b->next2 = (node*)malloc(sizeof(node));
-  bb = head->next2;
-  fscanf(fp,"%s", bb->creature);
-
+  bb = b->next2;
+  (*bb).creature = "鯖";
 
   printf("%s\n", head->creature);
+  a = head->next1;
   printf("%s  ", a->creature);
+  b = head->next2;
   printf("%s\n", b->creature);
+  aa = a->next1;
   printf("%s  ", aa->creature);
+  ab = a->next2;
   printf("%s  ", ab->creature);
-  printf("%s  ", a->creature);
-  printf("%s\n", b->creature);
-
+  ba = b->next1;
+  printf("%s  ", ba->creature);
+  bb = b->next2;
+  printf("%s\n", bb->creature);
 }
